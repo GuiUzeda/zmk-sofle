@@ -10,6 +10,7 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <behaviors/rgbled_widget.dtsi>
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
@@ -407,7 +408,7 @@
         layer_4 {
             bindings = <
             &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3  &bt BT_SEL 4 &trans &trans  &bt BT_CLR  &bt BT_CLR_ALL  &out OUT_USB  &out OUT_BLE  &trans  &trans
-            &none      &to 0            &to 1            &none            &none         &none         &trans  &none       &none           &none         &none         &none   &none 
+            &ind_con      &to 0            &to 1            &none            &none         &none         &trans  &none       &none           &none         &none      &none   &ind_bat 
             &rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_BRI  &none         &none         &trans  &none       &none           &none         &none         &none   &none 
             &rgb_ug RGB_EFF  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_BRD  &none         &none         &trans  &none       &none           &none         &none         &none   &none 
             &trans           &trans           &trans           &trans           &trans        &trans        &trans  &trans      &trans          &trans        &trans        &trans
